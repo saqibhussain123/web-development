@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylish Weather App UI</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(to bottom right, #4facfe, #00f2fe);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+}
+
+.weather-app {
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 25px;
+    width: 350px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: white;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+
+
+.search-btn {
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 3px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+}
+
+.search-btn:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.weather-info {
+    margin-bottom: 20px;
+}
+
+.weather-icon {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 10px;
+}
+
+#temperature {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+}
+
+#condition {
+    font-size: 1.3rem;
+    color: white;
+    opacity: 0.8;
+}
+
+.extra-info {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.extra-info div {
+    text-align: center;
+}
+
+.extra-info h3 {
+    font-size: 1rem;
+    color: #ddd;
+}
+
+.extra-info p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+#location{
+    width: 80%;
+    border-radius: 15px;
+    border: none;
+    font-style: bold;
+    height: 35px;
+    padding-left: 5px;
+    
+}
+
+    </style>
+</head>
+<body>
+    <div class="weather-app">
+        <!-- Header Section -->
+        <div class="header">
+            <input type="text" id="location">
+            
+            <button class="search-btn">🔍</button>
+        </div>
+        
+        <!-- Main Weather Section -->
+        <div class="weather-info">
+            <img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" alt="Sunny" class="weather-icon">
+            <h2 id="temperature"></h2>
+            <p id="condition">No Data</p>
+        </div>
+
+        <!-- Additional Info Section -->
+        <div class="extra-info">
+            <div>
+                <h3>Humidity</h3>
+                <p id="humidity">0%</p>
+            </div>
+            <div>
+                <h3>Wind</h3>
+                <p id="wind">0 km/h</p>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="weatherapp.js"></script>
+</body>
+</html>

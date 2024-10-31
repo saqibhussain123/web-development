@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="promise.js"></script>
+</body>
+</html>
+
+
+
+<!-- Promises in JavaScript
+A Promise is an object that represents the eventual completion (or failure) of an asynchronous operation and its resulting value. Promises provide a more manageable way to handle asynchronous operations compared to traditional callback functions.
+
+Key Points
+States of a Promise:
+
+Pending: The initial state; the operation is ongoing.
+Fulfilled: The operation completed successfully.
+Rejected: The operation failed.
+Creating a Promise:
+
+You can create a Promise using the Promise constructor, which takes a function with two parameters: resolve and reject.
+Example:
+javascript
+Copy code
+const myPromise = new Promise((resolve, reject) => {
+    const success = true; // Simulating success or failure
+    if (success) {
+        resolve("Operation successful!");
+    } else {
+        reject("Operation failed.");
+    }
+}); -->
+<!-- Consuming a Promise:
+
+You can handle the results of a Promise using .then() for fulfillment and .catch() for rejection.
+Example:
+javascript
+Copy code
+myPromise
+    .then(result => {
+        console.log(result); // Outputs: Operation successful!
+    })
+    .catch(error => {
+        console.log(error); // Outputs: Operation failed.
+    });
+Chaining Promises:
+
+You can chain multiple .then() calls to handle sequential asynchronous operations.
+Example:
+javascript
+Copy code
+const fetchData = () => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("Data fetched!");
+        }, 1000);
+    });
+};
+
+fetchData()
+    .then(data => {
+        console.log(data); // Outputs: Data fetched!
+        return "Processing data...";
+    })
+    .then(result => {
+        console.log(result); // Outputs: Processing data...
+    });
+Promise.all():
+
+Promise.all() allows you to execute multiple Promises in parallel and waits for all of them to resolve or for any to reject.
+Example:
+javascript
+Copy code
+const promise1 = Promise.resolve(3);
+const promise2 = 42;
+const promise3 = new Promise((resolve, reject) => {
+    setTimeout(resolve, 100, 'foo');
+});
+
+Promise.all([promise1, promise2, promise3])
+    .then(values => {
+        console.log(values); // Outputs: [3, 42, "foo"]
+    });
+Summary
+Promises provide a cleaner way to handle asynchronous operations in JavaScript, making the code more readable and manageable.
+They have three states: pending, fulfilled, and rejected.
+You can chain them and use Promise.all() to handle multiple asynchronous operations together. -->
+
+

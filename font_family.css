@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'oswald';
+    src: url('Oswald/Oswald-VariableFont_wght.ttf');
+}
+
+body{
+    font-family: oswald,sans-serif,Georgia, 'Times New Roman', Times, serif;
+}

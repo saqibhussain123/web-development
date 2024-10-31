@@ -1,0 +1,42 @@
+
+JSON in JavaScript
+JSON (JavaScript Object Notation) ek lightweight data interchange format hai jo data ko human-readable format mein represent karta hai. Yeh JavaScript mein objects ko serialize aur deserialize karne ke liye istemal hota hai.
+
+Key Points
+Format:
+
+JSON format key-value pairs par based hota hai, jahan keys hamesha strings hoti hain.
+Example:
+json
+Copy code
+{
+    "name": "Ali",
+    "age": 25,
+    "isStudent": true,
+    "courses": ["Math", "Science"]
+}
+Usage in JavaScript:
+
+JSON ko JavaScript mein use karne ke liye JSON object ke methods istemal kiye jate hain: JSON.stringify() aur JSON.parse().
+JSON.stringify():
+
+Yeh method JavaScript object ko JSON string mein convert karta hai.
+Example:
+javascript
+Copy code
+const user = { name: "Ali", age: 25 };
+const jsonString = JSON.stringify(user); // Outputs: '{"name":"Ali","age":25}'
+JSON.parse():
+
+Yeh method JSON string ko JavaScript object mein convert karta hai.
+Example:
+javascript
+Copy code
+const jsonString = '{"name":"Ali","age":25}';
+const user = JSON.parse(jsonString); // Outputs: { name: "Ali", age: 25 }
+Interacting with APIs:
+
+JSON ko web APIs ke sath data exchange karne ke liye istemal hota hai. API se data receive karne par yeh JSON format mein hota hai.
+Summary
+JSON ek simple aur lightweight format hai data ko store aur transfer karne ke liye.
+JSON.stringify() se object ko JSON string mein convert kiya jata hai, aur JSON.parse() se JSON string ko object mein badla jata hai.

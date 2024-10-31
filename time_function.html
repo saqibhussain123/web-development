@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script src="time_function.js">
+
+    </script>
+</body>
+</html>
+
+
+
+1. setInterval()
+Definition: This function repeatedly calls a specified function at set intervals (in milliseconds).
+Usage: It continues to execute until it's stopped with clearInterval().
+Syntax:
+
+const intervalId = setInterval(callback, delay);
+Example:
+const intervalId = setInterval(() => {
+  console.log('This message is logged every second');
+}, 1000);
+
+
+
+2. setTimeout()
+Definition: This function executes a specified function after a delay (in milliseconds).
+Usage: It only runs once unless called again.
+Syntax:
+
+const timeoutId = setTimeout(callback, delay);
+Example:
+
+setTimeout(() => {
+  console.log('This message is logged after 2 seconds');
+}, 2000);
+
+
+3. Date
+Definition: The Date object in JavaScript is used to work with dates and times.
+Usage: It can create date objects, retrieve current dates, and manipulate date values.
+Example:
+const now = new Date(); // Current date and time
+console.log(now); // Outputs current date and time
+
+4. getDay()
+Definition: This method returns the day of the week for a given date, where 0 represents Sunday and 6 represents Saturday.
+Usage: It is called on a Date object.
+Syntax:
+
+const day = date.getDay();
+Example:
+const today = new Date();
+const dayOfWeek = today.getDay();
+console.log(dayOfWeek); // Outputs a number (0-6) representing the day
+
+5. toString()
+Definition: This method converts a date object into a human-readable string format.
+Usage: It is called on a Date object and returns a string representation of the date.
+Example:
+
+const now = new Date();
+console.log(now.toString()); // Outputs the date in a readable format
+Summary
+setInterval(): Repeatedly calls a function at specified intervals.
+setTimeout(): Calls a function once after a specified delay.
+Date: Object for handling dates and times.
+getDay(): Retrieves the day of the week from a Date object.
+toString(): Converts a Date object into a readable string format.
+These functions and methods are commonly used in JavaScript for managing time, dates, and asynchronous operations!
+
+
+

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="inp">
+    <button onclick="abc()">click here</button>
+  <button onclick="deleteall()">delete all</button>
+<ul id="ul">
+
+</ul>
+    <script src="class.js"></script>
+</body>
+</html>
+
+
+
+
+Class aur Object in JavaScript
+Class
+Definition: Class JavaScript mein ek blueprint hai jo objects ko define karne ke liye istemal hoti hai. Yeh ek template hoti hai jisme properties (attributes) aur methods (functions) hote hain.
+
+Syntax:
+
+javascript
+Copy code
+class ClassName {
+    constructor(parameters) {
+        // Properties ko initialize karna
+    }
+
+    methodName() {
+        // Method ka code
+    }
+}
+Example:
+
+javascript
+Copy code
+class Dog {
+    constructor(name, breed) {
+        this.name = name; // Property
+        this.breed = breed; // Property
+    }
+
+    bark() { // Method
+        console.log("Woof! My name is " + this.name);
+    }
+}
+Object
+Definition: Object ek instance hai class ka. Yeh ek specific entity hoti hai jo class ke template par based hoti hai. Ismein properties aur methods hote hain.
+Example:
+javascript
+Copy code
+const myDog = new Dog("Buddy", "Golden Retriever"); // Object bana rahe hain
+myDog.bark(); // Outputs: Woof! My name is Buddy
+Summary
+Class: Blueprint ya template hai jo objects ko define karta hai.
+Object: Class ka instance hai, jo properties aur methods ke sath ek specific entity hoti hai.
+Yeh dono concepts JavaScript mein object-oriented programming ko samajhne ke liye bohat zaroori hain!
+
+
+
